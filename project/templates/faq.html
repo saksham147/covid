@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/faq.css">
+    <title>FAQs</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="quiz/">
+                <img src="static/img/logo.png">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/covid">COVID-19</a></li>
+                    <li><a href="/quiz">QUIZ</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section>
+        <div class="text-box">
+            <h1>COVID-<span>19</span></h1>
+            <p> Once you replace negative thoughts with positive ones, you’ll start having positive results –Willie Nelson
+            </p>
+            <a href="https://en.wikipedia.org/wiki/COVID-19" class="btn">EXPLORE MORE</a>
+        </div>
+    </section>
+    <section>
+        <h2 class="title">FAQs</h2>
+        <div class="faq">
+            <div class="ques">
+                <h3>What is COVID-19?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>COVID-19 is a disease caused by a virus called SARS-CoV-2. Most people with COVID-19 have mild
+                    symptoms, but some people
+                    can become severely ill. Although most people with COVID-19 get better within weeks of illness, some
+                    people experience
+                    post-COVID conditions. Post-COVID conditions are a wide range of new, returning, or ongoing health
+                    problems people can
+                    experience more than four weeks after first being infected with the virus that causes COVID-19.
+                    Older people and those
+                    who have certain underlying medical conditions are more likely to get severely ill from COVID-19.
+                    Vaccines against
+                    COVID-19 are safe and effective.</p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <div class="ques">
+                <h3>Why is the disease being called coronavirus disease 2019, COVID-19?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>On February 11, 2020 the World Health Organization announced an official name for the disease that is
+                    causing the 2019
+                    novel coronavirus outbreak, first identified in Wuhan China. The new name of this disease is
+                    coronavirus disease 2019,
+                    abbreviated as COVID-19. In COVID-19, “CO” stands for corona, “VI” for virus, and ”D” for disease.
+                    Formerly, this
+                    disease was referred to as “2019 novel coronavirus” or “2019-nCoV".</p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <div class="ques">
+                <h3>How does the virus spread?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>COVID-19 spreads very easily from person to person. How easily a virus spreads from person to person
+                    can vary. The virus
+                    that causes COVID-19 appears to spread more efficiently than influenza but not as efficiently as
+                    measles, which is among
+                    the most contagious viruses known to affect people.</p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <div class="ques">
+                <h3>What are some of the common symptoms of the COVID-19 disease?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>Common symptoms include- fever, cough, breathlessness/ shortness of breath, fatigue, myalgia, rhinorrhea, sore throat, diarrhea, loss of smell, loss of taste etc. Few children may present with gastrointestinal symptoms and atypical symptoms.</p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <div class="ques">
+                <h3>How long should a COVID-19 patient be under home isolation for?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>Patient under home isolation will stand discharged and end isolation after at least 10 days have passed from onset of symptoms (or from date of sampling for asymptomatic cases) and no fever for 3 days. There is no need for testing after the home isolation period is over.</p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <div class="ques">
+                <h3>Can you spread Covid-19 if you test positive and have no symptoms, but are vaccinated?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="ans">
+                <p>Vaccinated people who aren't feeling sick might still trigger a positive COVID-19 test while their body fights off the virus, but aren't at risk of infecting others, said Dr. Monica Gandhi at the University of California-San Francisco, who has studied virus safety in schools.</p>
+            </div>
+        </div>
+        <div class="space"></div>
+    </section>
+    <script>
+        const faqs = document.querySelectorAll(".faq");
+
+        faqs.forEach(faq => {
+            faq.addEventListener("click", () => {
+                faq.classList.toggle("active");
+            })
+        })
+    </script>
+</body>
+
+</html>

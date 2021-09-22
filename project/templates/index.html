@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>HOME</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="contain">
+    <section class="header">
+        <nav>
+            <a href="quiz/">
+                <img src="static/img/logo.png">
+            </a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/covid">COVID-19</a></li>
+                    <li><a href="/quiz">QUIZ</a></li>
+                    <li><a href="/faq">FAQs</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="box">
+            <h1>STAY SAFE STAY HOME</h1>
+            <p>Few things in the world are more powerful than a positive push. A smile.A world of optimism and hope.A ‘you
+                can do it
+                when things are tough.
+                <br>-Richard M.DeVos
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Coronavirus" class="btn">KNOW MORE</a>
+        </div>
+    </section>
+    <section class="data">
+        <h1>GLOBAL DATA</h1>
+        <div class="global">
+            <div class="container" id="one"><span></span>
+                <h1><b>CONFIRMED</b></h1>
+                <div id="total-cases"></div>
+                <div id="new-cases"></div>
+            </div>
+            <div class="container" id="two"><span></span>
+                <h1><b>RECOVERED</b></h1>
+                <div id="total-recovered"></div>
+                <div id="new-recovered"></div>
+            </div>
+            <div class="container" id="three"><span></span>
+                <h1><b>☮ DEATHS</b></h1>
+                <div id="total-deaths"></div>
+                <div id="new-deaths"></div>
+            </div>
+        </div>
+    </section>
+    <table id="countries" class="containe-fluid table table-striped table-borderless">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Confirmed</th>
+                <th>Recovered</th>
+                <th>Deaths</th>
+    
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+    
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "https://api.covid19api.com/summary",
+            success: function (data) {
+                $('#new-cases').html("+" + data.Global.NewConfirmed);
+                $('#total-cases').html("Total Cases : " + data.Global.TotalConfirmed);
+                $('#new-recovered').html("+ " + data.Global.NewRecovered);
+                $('#total-recovered').html("Total Recovered : " + data.Global.TotalRecovered);
+                $('#new-deaths').html("+ " + data.Global.NewDeaths);
+                $('#total-deaths').html("Total Deaths : " + data.Global.TotalDeaths);
+
+                data.Countries.forEach(function (country) {
+                    $('#countries > tbody').append(`
+                <tr>
+                <td>${country.Country}</td>
+                <td>${country.TotalConfirmed}<br>+${country.NewConfirmed}</td>
+                <td>${country.TotalRecovered}<br>+${country.NewRecovered}</td>
+                <td>${country.TotalDeaths}<br>+${country.NewDeaths}</td>
+                </tr>
+                
+                `)
+                })
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        })
+
+    </script>
+</div>
+</body>
+
+</html>
