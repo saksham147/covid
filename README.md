@@ -1,20 +1,14 @@
 # Coronavirus disease(COVID-19)
 
-## Video Demo
-
-https://youtu.be/uJJnT03QsdE
-
 # Description
 
-Hello world! This is Saksham Gupta of India. This is my new CS50X(CS50's Introduction to Computer Science) project. This site provides information about For the ongoing pandemic Coronavirus disease 2019 (COVID-19), also known as the coronavirus, or COVID.
+Hello world! This is Saksham Gupta.This site provides information about For the ongoing pandemic Coronavirus disease 2019 (COVID-19), also known as the coronavirus, or COVID.
 
-After many hair pulling moments, I finally managed to complete my final project. Its a  web application using Flask  basically show the data of Coronavirus disease 2019 (COVID-19) fetch the data using API(application programming interface )
+Its a  web application using Flask  basically show the data of Coronavirus disease 2019 (COVID-19) fetch the data using API(application programming interface )
 
 API - https://api.covid19api.com/summary
 
-Do check it out! Its quite simple but hopefully it can give some inspiration to those that have yet to complete their final project.
-
-I obtained the data from various websites showing coronavirus data by web scraping then basically format the data to what i want csv and geojson etc. I also used various APIs such as Mapbox GL JS. Sry its currently not on air :(
+Do check it out! Its quite simple but hopefully it can give some inspiration.
 
 
 COVID-19 is a contagious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan, China, in December 2019. The disease has since spread worldwide, leading to an ongoing pandemic.
